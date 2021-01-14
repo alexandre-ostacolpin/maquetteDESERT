@@ -1,0 +1,8 @@
+/* Media Queries pour la version tablette */
+/* Maquette Désert  */
+
+@media (min-width:767px) and (max-width:1200px) {
+    header ul li {
+        background-color: #e2e2e2;
+    }
+}

@@ -1,0 +1,12 @@
+/* Media Queries pour la version mobile */
+/* Maquette Désert  */
+
+@media (min-width:320px) and (max-width:767px) {
+    header ul li {
+        background-color: #e2e2e2;
+    }
+
+    aside {
+        display: none;
+    }
+}

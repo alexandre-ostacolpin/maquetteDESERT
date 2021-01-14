@@ -1,0 +1,41 @@
+/* Style > page sur les déserts du monde */
+
+
+body {
+    background-color: #e2e2e2;
+}
+
+/* img {
+    max-width: 100%;
+} */
+
+/* Navigation */
+nav > a {
+    background-color: #e2e2e2;
+    color: #333;
+}
+
+nav > a::before,
+nav > a::after {
+    content: " - ";
+}
+
+/* Paragraphe */
+/* Pour faire un alinéa  */
+section > p::before {
+    content: "";
+    padding-left: 50px;
+}
+
+section > p {
+    text-indent: 50px;
+}
+
+
+/* Règles média queries */
+
+@media (min-width:992px) {
+    nav > a {
+        background-color: #fff;
+    }
+}
