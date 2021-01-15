@@ -15,61 +15,73 @@
   </head>
   <body class="container">
     <!-- Début de page  -->
-    <div class="bg-white">
+    
+    <div class="bg-white px-3 border border-secondary"><!-- px-3 padding axe horizontal -->
 
         <!-- ============================================================== -->
         <!-- Début contenu -->
         <!-- ============================================================== -->
-        <header>
-            <div>
-                <img src="img/logo.png" alt="Les déserts du monde">
+
+        <!-- d-lg-flex (display large flex) pour écran lg d'abord, puis justification et alignement -->
+        <header class="d-lg-flex justify-content-between align-items-center text-center">
+            <!-- idem pour la 1ère div -->
+            <!-- div logo h1 -->
+            <div class="d-lg-flex justify-content-between align-items-center">
+                <img src="img/logo.png" alt="Les déserts du monde" class="img-fluid m-2">
                 <h1>Déserts du monde</h1>
             </div><!-- Fin div -->
 
-            <nav class="">
-                <a href="#" class="">Actualités</a>
-                <a href="#" class="">Galerie</a>
-                <a href="#" class="">Contact</a>
+            <!-- Les enfants de la nav seront flex à partir de la tablette -->
+            <nav class="d-md-flex custom-width-50 p-2">
+                <!-- Les liens sont sur 12 colonnes puis sur 4 à partir de tablette -->
+                <a href="#" class="col-12 col-md-4 d-inline-block py-1 my-1 text-decoration-none text-uppercase">Actualités</a>
+                <a href="#" class="col-12 col-md-4 d-inline-block py-1 my-1 text-decoration-none text-uppercase">Galerie</a>
+                <a href="#" class="col-12 col-md-4 d-inline-block py-1 my-1 text-decoration-none text-uppercase">Contact</a>
             </nav>
+
         </header>
 
         <hr class="">
 
         <!-- Début main  -->
-        <main class="">
-            <section class="">
-                <h2 class="">A chaque désert sont voyage, ses couleurs...</h2>
+        <!-- Les enfants de main sont flex en lg -->
+        <main class="d-lg-flex my-4 px-4">
 
-                <img src="img/desert.jpg" alt="Un arbre dans le désert" class="img-fluid">
+            <section class="col-lg-8">
+                <h2 class="text-left">A chaque désert sont voyage, ses couleurs...</h2>
+                <!-- w-100 img la taille du parent -->
+                <img src="img/desert.jpg" alt="Un arbre dans le désert" class="img-fluid my-4 w-100">
 
-                <p><strong>Que dit le désert ? Que signifie-t-il? Que suggère-t-il ?"</strong><em>"Le désert est un être poétique"</em>. Voici, pour commencer, une vérité ontologique à soutenir car elle n'induit point en erreur. On ne saurait discourir sur le désert sans penser préalablement à la notion de "vide". En effet, le premier sentiment qui s'empare de nous lorsqu'on évoque le désert, c'est le sentiment de vie. </p>
+                <p class="text-justify"><strong>Que dit le désert ? Que signifie-t-il? Que suggère-t-il ?"</strong><em>"Le désert est un être poétique"</em>. Voici, pour commencer, une vérité ontologique à soutenir car elle n'induit point en erreur. On ne saurait discourir sur le désert sans penser préalablement à la notion de "vide". En effet, le premier sentiment qui s'empare de nous lorsqu'on évoque le désert, c'est le sentiment de vie. </p>
 
-                <p>On imagine l'espace. On imagine son immensité. On imagine sa vacuité et sa dureté. Dans l'inconscient collectif universel, le désert est notamment lié au sentiment de perte et d'errance. Il est sans contexte la métaphore de la solitude et de l'isolement. Toutefois, le désert, bien qu'il soit visiblement vide, est un espace peuplé. Il est peuplé de secrets et de métaphores qui définissent plus l'être énigmatique qu'il est que le simple espace exposé à l'œil. Phénoménologiquement parlant, pour comprendre le désert, il faut vivre l'expérience du désert</p>
+                <p class="text-justify">On imagine l'espace. On imagine son immensité. On imagine sa vacuité et sa dureté. Dans l'inconscient collectif universel, le désert est notamment lié au sentiment de perte et d'errance. Il est sans contexte la métaphore de la solitude et de l'isolement. Toutefois, le désert, bien qu'il soit visiblement vide, est un espace peuplé. Il est peuplé de secrets et de métaphores qui définissent plus l'être énigmatique qu'il est que le simple espace exposé à l'œil. Phénoménologiquement parlant, pour comprendre le désert, il faut vivre l'expérience du désert</p>
 
-                <p>Il faut entrer en télescopage avec lui afin d'en déduire le sens et la signification. En principe, nulle présence (humaine ou autre) ne peut prétendre signifier intrinsèquement. Toute signification, toute connaissance est une expérience. Ainsi, la signification est-elle plutôt extrinsèque. elle émane d'une expérience externe exercée librement par l'autre sur le même. Dans cette perspective, le désert, objet de réflexion, est à considérer comme étant un livre un texte à draguer, à séduire inlassablement afin de gagner sa confiance, son intimité et sa foi. Il faut y voir un "visage", "le commencement même de la philosophie"(Emmanuel Lévinas, <em>Entre nous,</em> grasset et Fasquelle, 1991.) En fait le désert s'expose au regard comme s'il s'agissait d'un visage, l'épreuve de l'infini. </p>
+                <p class="text-justify">Il faut entrer en télescopage avec lui afin d'en déduire le sens et la signification. En principe, nulle présence (humaine ou autre) ne peut prétendre signifier intrinsèquement. Toute signification, toute connaissance est une expérience. Ainsi, la signification est-elle plutôt extrinsèque. elle émane d'une expérience externe exercée librement par l'autre sur le même. Dans cette perspective, le désert, objet de réflexion, est à considérer comme étant un livre un texte à draguer, à séduire inlassablement afin de gagner sa confiance, son intimité et sa foi. Il faut y voir un "visage", "le commencement même de la philosophie"(Emmanuel Lévinas, <em>Entre nous,</em> grasset et Fasquelle, 1991.) En fait le désert s'expose au regard comme s'il s'agissait d'un visage, l'épreuve de l'infini. </p>
 
             </section>
 
             <!-- Début section latérale droite  -->
             <!-- Aside se masque en mode mobile avec d-none, et s'affiche à partir du mode tablette avec d-md-block -->
-            <aside class="d-none">
-                <hr class="">
+            <aside class="col-lg-4 d-none d-md-block">
+                <hr class="d-lg-none">
 
                 <div class="row">
-                    <div class="col">
-                        <h3 class="">Top 5 des désert du monde</h3>
-                        <ol class="">
-                            <li>Le désert de Gobi</li>
-                            <li>La vallée de la mort</li>
-                            <li>Le désert du Sahara</li>
-                            <li>Le désert de Gibson</li>
-                            <li>Le massif des Aurès</li>
+                    <!-- Les 2 col de la row aside on des comportements différents en md et lg -->
+                    <div class="col-md-6 col-lg-12">
+                        <h3 class="text-left">Top 5 des désert du monde</h3>
+                        <hr>
+                        <ol class="pl-2">
+                            <li><a href="#">Le désert de Gobi</a> </li>
+                            <li><a href="#">La vallée de la mort</a></li>
+                            <li><a href="#">Le désert du Sahara</a> </li>
+                            <li><a href="#">Le désert de Gibson</a> </li>
+                            <li><a href="#">Le massif des Aurès</a> </li>
                         </ol>
                     </div><!-- Fin col row aside -->
                         
-                    <div class="col">
-                        <h3 class="">Galerie</h3>
-                        <hr class="">
+                    <div class="col-md-6 col-lg-12">
+                        <h3 class="text-left mt-2">Galerie</h3>
+                        <hr>
                         <img src="img/vignette1.jpg" alt="Désert du monde" class="img-fluid">
                         <img src="img/vignette2.jpg" alt="Désert du monde" class="img-fluid">
                         <img src="img/vignette3.jpg" alt="Désert du monde" class="img-fluid">
@@ -87,9 +99,9 @@
             </aside>
         </main>
 
-        <footer class="">
+        <footer class="text-center mt-2">
             <hr>
-            <p>&#169; 2021 - Les déserts du monde</p>
+            <p class="py-4">&#169; 2021 - Les déserts du monde</p>
         </footer>
     </div><!-- Fin div principal -->
 
